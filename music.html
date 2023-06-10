@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,400italic'>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/ekko-lightbox.min.css">
+<!--    <link rel="stylesheet" type="text/css" href="css/ekko-lightbox-dark.css"> -->
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/music.css">
+<!--    for the mp3 player code                                           
+    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ --> 
+    
+<!--
+Sigma Template
+http://www.templatemo.com/tm-479-sigma
+-->
+    <title>DipoleMusic</title>
+</head>
+
+<body>
+
+<header id="top">
+
+	<div class="container-fluid">
+
+    
+        <div class="row">
+        
+            <div class="col-lg-4 col-md-12 site-title">
+                <h1>DipoleMusic</h1>
+                <h2>Music expresses feelings and thought, without language; it was below and before speech, and it is above and beyond all words</h2>
+                
+            </div>
+            
+            <div class="col-lg-8 col-md-12 main-menu">
+                
+                <nav class="navbar navbar-light">
+                  <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home <!-- <span class="sr-only">(current)</span> --></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="music.html">Music</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="dipoleTheory.html">Dipole Theory</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="maths.html">Mathematics</a>
+                    </li>
+                  </ul>
+                </nav>
+              
+            </div>
+            
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+            	<hr class="sigma-hr">
+            </div>
+        </div>
+
+    </div>
+    
+</header>
+<section id="home">
+
+    <!-- Bamford Bommino & Luke -->
+
+	<div class="container-fluid">
+        <div class="row sigma-home single-page-nav">
+
+            <img src="images/BBLAlbumCover.jpeg" alt="Album Cover World Of Abstraction" class="img-fluid sigmapad col-lg-4 col-md-6 col-sm-6">
+        	<div class="sigma-content col-lg-4 col-md-6 col-sm-6 text-center">
+        		<h1>Bamford Bommino & Luke</h1>
+        			<div class="dropdown">
+                		<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Select Track</button>
+                		<div class="dropdown-menu">
+                        	<a class="dropdown-item"  onclick="playAudio('audio1'); displayName1('Holier Than'); event.preventDefault()">Holier Than</a>
+                        	<a class="dropdown-item"  onclick="playAudio('audio2');displayName1('Cathedrals'); event.preventDefault()">Cathedrals</a>
+                        	<a class="dropdown-item"  onclick="playAudio('audio3');displayName1('World Of Abstraction'); event.preventDefault()">World Of Abstraction</a>
+                        	<a class="dropdown-item"  onclick="playAudio('audio4');displayName1('Dissapearing Wave'); event.preventDefault()">Dissapearing Wave</a>
+                        	<a class="dropdown-item"  onclick="playAudio('audio5');displayName1('Now and Then'); event.preventDefault()">Now and Then</a>
+                        	<a class="dropdown-item"  onclick="playAudio('audio6');displayName1('Soft Flute Machine'); event.preventDefault()">Soft Flute Machine</a>
+                        	<a class="dropdown-item"  onclick="playAudio('audio7');displayName1('Brocken Dreams'); event.preventDefault()">Brocken Dreams</a>
+                        	<a class="dropdown-item"  onclick="playAudio('audio8');displayName1('Shivers'); event.preventDefault()">Shivers</a>
+                        	<a class="dropdown-item"  onclick="playAudio('audio9');displayName1('Proco Blues'); event.preventDefault()">Proco Blues</a>
+                        	<a class="dropdown-item"  onclick="playAudio('audio10');displayName1('World Upside Down'); event.preventDefault()">World Upside Down</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio11');displayName1('Dont Save Me Now'); event.preventDefault()">Dont Save Me Now</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio12');displayName1('Time to Run'); event.preventDefault()">Time to Run</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio13');displayName1('Circle Of Thirds'); event.preventDefault()">Circle Of Thirds</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio14');displayName1('November Nights'); event.preventDefault()">November Nights</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio15');displayName1('Holier Than (Edit)'); event.preventDefault()">Holier Than (Edit)</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio16');displayName1(''); event.preventDefault()">---STOP---</a>
+                		</div>
+        			</div>
+                    <h3 id="trackName1"></h3>
+					<br><br>	
+                    <button type="button" class="btn btn-primary" onclick="playlist(['audio1','audio2','audio3','audio4','audio5','audio6','audio7','audio8','audio9','audio10','audio11','audio12','audio13','audio14','audio15']);displayName1('')">Play Album</button>	
+			</div> 
+
+            <img src="images/BamfordBomminoLuke.jpeg" alt="Drum Kit" class="img-fluid sigmapad col-lg-4 col-md-6 col-sm-6">
+		</div>
+	</div>  
+
+	<!-- Dipoleman  -->
+    
+    <div class="container-fluid">
+        <div class="row sigma-home single-page-nav">
+            <img src="images/SOAPT.jpg" alt="Sphere of all possible thoughts" class="img-fluid sigmapad col-lg-4 col-md-6 col-sm-6">
+            <div class="sigma-content col-lg-4 col-md-6 col-sm-6 text-center">
+                <h1>DipoleMan</h1>
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Select Track</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item"  onclick="playAudio('audio21');displayName2('Extragalactic Seed'); event.preventDefault()">Extragalactic Seed</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio22');displayName2('Molecular March<'); event.preventDefault()">Molecular March</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio23');displayName2('War Of The Metaphysical'); event.preventDefault()">War Of The Metaphysical</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio24');displayName2('Machine Dreams'); event.preventDefault()">Machine Dreams</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio25');displayName2('Call To Arms'); event.preventDefault()">Call To Arms</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio26');displayName2('Awaiting Logos'); event.preventDefault()">Awaiting Logos</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio27');displayName2('Enter The False God'); event.preventDefault()">Enter The False God</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio28');displayName2('Pandemonium Of Truth'); event.preventDefault()">Pandemonium Of Truth</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio29');displayName2('Futility Of The Negative'); event.preventDefault()">Futility Of The Negative</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio30');displayName2(''); event.preventDefault()">---STOP---</a>
+                        </div>
+                    </div>
+                    <h3 id="trackName2"></h3>
+                    <br><br>
+                    <button type="button" class="btn btn-primary" onclick="playlist(['audio21','audio22','audio23','audio24','audio25','audio26','audio27','audio28','audio29']);displayName2('')">Play Album</button>
+            </div> 
+            <img src="images/Mythamatical.jpeg" alt="Album Cover Mythamatical Panspermia" class="img-fluid sigmapad col-lg-4 col-md-6 col-sm-6">
+        </div>
+    </div>  
+
+    <!-- Gee Lo and the Dipole -->
+
+    <div class="container-fluid">
+        <div class="row sigma-home single-page-nav">
+
+            <img src="images/ManchetserRain.jpeg" alt="Album Cover Manchester Rain" class="img-fluid sigmapad col-lg-4 col-md-6 col-sm-6">
+            <div class="sigma-content col-lg-4 col-md-6 col-sm-6 text-center">
+                <h1>Gee Lo and the Dipole</h1>
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Select Track</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item"  onclick="playAudio('audio41'); displayName3('Everyday Power'); event.preventDefault()">Everyday Power</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio42'); displayName3('Go With The Flow'); event.preventDefault()">Go With The Flow</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio43'); displayName3('Break'); event.preventDefault()">Break</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio44'); displayName3('St.Tropez'); event.preventDefault()">St.Tropez</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio45'); displayName3('Manchester Rain'); event.preventDefault()">Manchester Rain</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio46'); displayName3('Leave Me Be'); event.preventDefault()">Leave Me Be</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio47'); displayName3('A Lost Soul'); event.preventDefault()">A Lost Soul</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio48'); displayName3('RiverBank Blues'); event.preventDefault()">RiverBank Blues</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio49'); displayName3('Little Bit Of Dust'); event.preventDefault()">Little Bit Of Dust</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio50'); displayName3('BaBaBeBow'); event.preventDefault()">BaBaBeBow</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio51'); displayName3('Manchester Rain Reprise'); event.preventDefault()">Manchester Rain Reprise</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio52'); displayName3('Funny How'); event.preventDefault()">Funny How</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio30'); displayName3(''); event.preventDefault()">---STOP---</a>
+                        </div>
+                    </div>
+                    <h3 id="trackName3"></h3>
+                    <br><br>
+                    <button type="button" class="btn btn-primary" onclick="playlist(['audio41','audio42','audio43','audio44','audio45','audio46','audio47','audio48','audio49','audio50','audio51','audio52']);displayName3('')">Play Album</button>
+                    <!-- <br><br>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="myRange"> -->
+            </div> 
+
+            <img src="images/GLD_logo.jpeg" alt="Gee Lo and the Dipole Logo" class="img-fluid sigmapad col-lg-4 col-md-6 col-sm-6">
+        </div>
+    </div>  
+
+    <!-- My Computer -->
+
+    <div class="container-fluid">
+        <div class="row sigma-home single-page-nav">
+
+            <img src="images/Vulnerabillia.jpg" alt="Album Cover Vulnerabillia" class="img-fluid sigmapad col-lg-4 col-md-6 col-sm-6">
+            <div class="sigma-content col-lg-4 col-md-6 col-sm-6 text-center">
+                <h1>My Computer</h1>
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Select Track</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item"  onclick="playAudio('audio61'); displayName4('All I Ever Really Wanted Was A Good Time'); event.preventDefault()">All I Ever Really Wanted Was A Good Time</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio62'); displayName4('More To Life'); event.preventDefault()">More To Life</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio63'); displayName4('Rope'); event.preventDefault()">Rope</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio64'); displayName4('Vulnerabilia'); event.preventDefault()">Vulnerabilia</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio65'); displayName4('Fill My Cup'); event.preventDefault()">Fill My Cup</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio66'); displayName4('Majic Flat'); event.preventDefault()">Majic Flat</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio67'); displayName4('For Somebody Else'); event.preventDefault()">For Somebody Else</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio68'); displayName4('No More Dealing'); event.preventDefault()">No More Dealing</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio69'); displayName4('There Are Ways'); event.preventDefault()">There Are Ways</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio70'); displayName4('I Dont Care How You Treat Me'); event.preventDefault()">I Dont Care How You Treat Me</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio71'); displayName4('If You Dare'); event.preventDefault()">If You Dare</a>
+                            <a class="dropdown-item"  onclick="playAudio('audio30'); displayName4(''); event.preventDefault()">---STOP---</a>
+                        </div>
+                    </div>
+                    <h3 id="trackName4"></h3>
+                    <br><br>
+                    <button type="button" class="btn btn-primary" onclick="playlist(['audio61','audio62','audio63','audio64','audio65','audio66','audio67','audio68','audio69','audio70','audio71']);displayName4('')">Play Album</button>
+            </div> 
+            <a href="http://www.manchestermusic.co.uk/mycomputer/" data-toggle="lightbox" data-gallery="sigma-gallery" data-title="Image Title 04">
+            <img src="images/UncutBest2002.jpg" alt="Uncut Magazine Best 2002" class="img-fluid sigmapad col-lg-4 col-md-6 col-sm-6">
+        </div>
+    </div>  
+
+    <audio id='myAudio'>
+        <!-- Bamford Bommino & Luke -->
+        <source id='audio1' src='music/Bamford_Bommino_Luke/01 Holier Than v1.3.mp3' type='audio/mpeg'>
+        <source id='audio2' src='music/Bamford_Bommino_Luke/02 Cathedrals 1.3.mp3' type='audio/mpeg'>
+        <source id='audio3' src='music/Bamford_Bommino_Luke/03 WorldOfAbstraction 4.2.mp3' type='audio/mpeg'>
+        <source id='audio4' src='music/Bamford_Bommino_Luke/04 Dissapearing Wave PSG 2.1.mp3' type='audio/mpeg'>
+        <source id='audio5' src='music/Bamford_Bommino_Luke/05 Now and Then Vox 1.9.mp3' type='audio/mpeg'>
+        <source id='audio6' src='music/Bamford_Bommino_Luke/06 Soft Flute Machine v8.mp3' type='audio/mpeg'>
+        <source id='audio7' src='music/Bamford_Bommino_Luke/07 Broken Dreams v1.8.mp3' type='audio/mpeg'>
+        <source id='audio8' src='music/Bamford_Bommino_Luke/08 Shivers 1.7.mp3' type='audio/mpeg'>
+        <source id='audio9' src='music/Bamford_Bommino_Luke/09 Proco Blues V6.4.mp3' type='audio/mpeg'>
+        <source id='audio10' src='music/Bamford_Bommino_Luke/10 WorldUpdideDown 1.5.mp3' type='audio/mpeg'>
+        <source id='audio11' src='music/Bamford_Bommino_Luke/11 Dont Save Me Now 2.2.mp3' type='audio/mpeg'>
+        <source id='audio12' src='music/Bamford_Bommino_Luke/12 Time To Run 1.6.mp3' type='audio/mpeg'>
+        <source id='audio13' src='music/Bamford_Bommino_Luke/13 Circle of Thirds 2.6.mp3' type='audio/mpeg'>
+        <source id='audio14' src='music/Bamford_Bommino_Luke/14 November Nights 2.3.mp3' type='audio/mpeg'>
+        <source id='audio15' src='music/Bamford_Bommino_Luke/15 Holier Than v1.4 Edit 2.mp3' type='audio/mpeg'>
+        <source id='audio16' src='music/Bamford_Bommino_Luke/Audio.mp3' type='audio/mpeg'>
+        <!-- Dipoleman  -->
+        <source id='audio21' src='music/DipoleMan/01 Extragalactic Seed.mp3' type='audio/mpeg'>
+        <source id='audio22' src='music/DipoleMan/02 Molecular March.mp3' type='audio/mpeg'>
+        <source id='audio23' src='music/DipoleMan/03 War Of The Metaphysical.mp3' type='audio/mpeg'>
+        <source id='audio24' src='music/DipoleMan/04 Machine Dreams.mp3' type='audio/mpeg'>
+        <source id='audio25' src='music/DipoleMan/05 Call To Arms.mp3' type='audio/mpeg'>
+        <source id='audio26' src='music/DipoleMan/06 Awaiting Logos.mp3' type='audio/mpeg'>
+        <source id='audio27' src='music/DipoleMan/07 Enter The False God.mp3' type='audio/mpeg'>
+        <source id='audio28' src='music/DipoleMan/08 Pandemonium Of Truth.mp3' type='audio/mpeg'>
+        <source id='audio29' src='music/DipoleMan/09 Futility Of The Negative.mp3' type='audio/mpeg'>
+        <source id='audio30' src='music/DipoleMan/Audio.mp3' type='audio/mpeg'>
+        <!-- Gee Lo and the Dipole -->
+        <source id='audio41' src='music/Gee Lo and the Dipole/01 Everyday Power.mp3' type='audio/mpeg'>
+        <source id='audio42' src='music/Gee Lo and the Dipole/02 Go With The Flow.mp3' type='audio/mpeg'>
+        <source id='audio43' src='music/Gee Lo and the Dipole/03 Break.mp3' type='audio/mpeg'>
+        <source id='audio44' src='music/Gee Lo and the Dipole/04 St.Tropay.mp3' type='audio/mpeg'>
+        <source id='audio45' src='music/Gee Lo and the Dipole/05 Manchester Rain.mp3' type='audio/mpeg'>
+        <source id='audio46' src='music/Gee Lo and the Dipole/06 Leave Me Be.mp3' type='audio/mpeg'>
+        <source id='audio47' src='music/Gee Lo and the Dipole/07 A Lost Soul.mp3' type='audio/mpeg'>
+        <source id='audio48' src='music/Gee Lo and the Dipole/08 RiverBank Blues.mp3' type='audio/mpeg'>
+        <source id='audio49' src='music/Gee Lo and the Dipole/09 Little Bit Of Dust.mp3' type='audio/mpeg'>
+        <source id='audio50' src='music/Gee Lo and the Dipole/10 BaBaBeBow.mp3' type='audio/mpeg'>
+        <source id='audio51' src='music/Gee Lo and the Dipole/11 Manchester Rain Reprise.mp3' type='audio/mpeg'>
+        <source id='audio52' src='music/Gee Lo and the Dipole/12 FunnyHow4.6.mp3' type='audio/mpeg'>
+        <source id='audio53' src='music/Gee Lo and the Dipole/Audio.mp3' type='audio/mpeg'>
+        <!-- My Computer Vulnerabilia -->
+        <source id='audio61' src='music/My Computer/Vulnerabilia/1-01 All I Ever Really Wanted Was A Good Time.mp3' type='audio/mpeg'>
+        <source id='audio62' src='music/My Computer/Vulnerabilia/1-02 More To Life.mp3' type='audio/mpeg'>
+        <source id='audio63' src='music/My Computer/Vulnerabilia/1-03 Rope.mp3' type='audio/mpeg'>
+        <source id='audio64' src='music/My Computer/Vulnerabilia/1-04 Vulnerabilia.mp3' type='audio/mpeg'>
+        <source id='audio65' src='music/My Computer/Vulnerabilia/1-05 Fill My Cup.mp3' type='audio/mpeg'>
+        <source id='audio66' src='music/My Computer/Vulnerabilia/1-06 Majic Flat.mp3' type='audio/mpeg'>
+        <source id='audio67' src='music/My Computer/Vulnerabilia/1-07 For Somebody Else.mp3' type='audio/mpeg'>
+        <source id='audio68' src='music/My Computer/Vulnerabilia/1-08 No More Dealing.mp3' type='audio/mpeg'>
+        <source id='audio69' src='music/My Computer/Vulnerabilia/1-09 There Are Ways.mp3' type='audio/mpeg'>
+        <source id='audio70' src='music/My Computer/Vulnerabilia/1-10 I Dont Care How You Treat Me.mp3' type='audio/mpeg'>
+        <source id='audio71' src='music/My Computer/Vulnerabilia/1-11 If You Dare.mp3' type='audio/mpeg'>
+
+    </audio>
+
+    <script>
+        var trackName1 = document.getElementById("trackName1");
+        var trackName2 = document.getElementById("trackName2");
+        var trackName3 = document.getElementById("trackName3");
+        var trackName4 = document.getElementById("trackName4");
+
+        function displayName1(name) {
+            trackName1.innerHTML = name;
+        }
+        function displayName2(name) {
+            trackName2.innerHTML = name;
+        }
+        function displayName3(name) {
+            trackName3.innerHTML = name;
+        }
+        function displayName4(name) {
+            trackName4.innerHTML = name;
+        }
+        
+        function playAudio(id) {
+            var x = document.getElementById("myAudio");
+            x.pause();
+            x.src = document.getElementById(id).src;
+            x.load();
+            x.play();
+        }
+
+        function playlist(ids) {
+          var x = document.getElementById("myAudio");
+          x.pause();
+          x.src = document.getElementById(ids[0]).src;
+          x.load();
+          x.play();
+          var i = 1;
+          x.addEventListener("ended", function() {
+            if (i < ids.length) {
+              x.src = document.getElementById(ids[i]).src;
+              x.load();
+              x.play();
+              i++;
+            }
+          });
+        }
+
+        
+            
+    </script>
+
+</section>
+
+
+<footer>
+
+	<div class="container-fluid">
+    
+    	<div class="row">
+            <div class="col-md-12">
+            	<hr class="sigma-hr">
+            </div>
+        </div>
+
+        <div class="row">
+        	<div class="sigma-copyright col-lg-8">
+            	<p>Copyright © 2001-2023 David Luke Dipole Theory</p>
+            </div>
+            
+            <div class="sigma-copyright col-lg-4 single-page-nav text-right">
+            	<p><a href="#top">Go to top</a></p>
+            </div>
+        </div>
+        
+    </div>   
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
