@@ -1,194 +1,277 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Set character encoding for the document -->
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <!-- Set compatibility mode for Internet Explorer -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- Set the viewport to ensure the page is displayed correctly on different devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Link to external font stylesheet -->
-    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,400italic'>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,400italic"
+    />
     <!-- Link to external Bootstrap stylesheet -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 
-    
     <!-- Link to custom stylesheet -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <!-- Link to custom maths stylesheet -->
-    <link rel="stylesheet" type="text/css" href="css/maths.css">
-
+    <link rel="stylesheet" type="text/css" href="css/maths.css" />
 
     <!-- Set the title of the document -->
     <title>DipoleMaths</title>
-</head>
+  </head>
 
-<body onload="initialGrid()">
+  <body onload="initialGrid()">
     <header id="top">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 site-title">
-                    <!-- Site title -->
-                    <h1>DipoleMaths</h1>
-                    <!-- Site tagline -->
-                    <h2>Georg Cantor "The fear of infinity is a form of myopia that destroys the possibility of seeing the actual infinite, even though it in its highest form has created and sustains us, and in its secondary transfinite forms occurs all around us and even inhabits our minds."</h2>                
-                </div>
-                <div class="col-lg-6 col-md-12 main-menu">                  
-                    <!-- Navigation menu -->
-                    <nav class="navbar navbar-light">
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="music.html">Music</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="dipoleTheory.html">Dipole Theory</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="maths.html">Fun Mathematics</a>
-                            </li>
-                        </ul>
-                    </nav>           
-                </div>
-            </div>
-            <!-- Horizontal rule -->
-            <div class="row">
-                <div class="col-md-12">
-                    <hr class="sigma-hr">
-                </div>
-            </div>
-        </div>        
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 site-title">
+            <!-- Site title -->
+            <h1>DipoleMaths</h1>
+            <!-- Site tagline -->
+            <h2>
+              Georg Cantor "The fear of infinity is a form of myopia that
+              destroys the possibility of seeing the actual infinite, even
+              though it in its highest form has created and sustains us, and in
+              its secondary transfinite forms occurs all around us and even
+              inhabits our minds."
+              <br>
+              <a href="mailto:dipolewebsite@gmail.com?subject=MathsInquiry">Contact Me</a>
+            </h2>
+          </div>
+          <div class="col-lg-6 col-md-12 main-menu">
+            <!-- Navigation menu -->
+            <nav class="navbar navbar-light">
+              <ul class="nav navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="music.html">Music</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="dipoleTheory.html">Dipole Theory</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="maths.html">Fun Mathematics</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- Horizontal rule -->
+        <div class="row">
+          <div class="col-md-12">
+            <hr class="sigma-hr" />
+          </div>
+        </div>
+      </div>
     </header>
 
-
-
     <main>
-        <!-- Schelling Model -->
-        <div class="row sigma-maths single-page-nav">
-            <h1>Schelling's Model of Segregation</h1>
+      <!-- Schelling Model -->
+      <div class="row sigma-maths single-page-nav">
+        <h1>Schelling's Model of Segregation</h1>
+      </div>
+      <br />
+      <div class="container-fluid pt-5 my-5 bg-light">
+        <!-- Section Heading with link -->
+        <div class="row">
+          <!-- columns for labels -->
+          <div class="col-lg-1 col-md-2 col-sm-6 col-xs-4 col-bordered">
+            <div class="form-group">
+              <label for="n_row">Cells</label><br /><br />
+            </div>
+            <div class="form-group">
+              <label for="threshold">Threshold</label><br /><br />
+            </div>
+            <div class="form-group">
+              <label for="density">Vacancy</label><br /><br />
+            </div>
+            <div class="form-group">
+              <label for="density">Mix</label><br /><br />
+            </div>
+          </div>
+
+          <!-- Column for Input Fields -->
+          <div class="col-lg-1 col-md-2 col-sm-6 col-xs-4 col-bordered">
+            <div class="form-group">
+              <input
+                type="number"
+                class="form-control"
+                id="n_row"
+                name="n_row"
+                value="48"
+              /><br /><br />
+            </div>
+            <div class="form-group">
+              <input
+                type="number"
+                class="form-control"
+                id="threshold"
+                name="threshold"
+                value="3"
+                min="1"
+                max="7"
+              /><br /><br />
+            </div>
+            <div class="form-group">
+              <input
+                type="number"
+                class="form-control"
+                id="vacancy"
+                name="vacancy"
+                value="20"
+              /><br /><br />
+            </div>
+            <div class="form-group">
+              <input
+                type="number"
+                class="form-control"
+                id="mix"
+                name="mix"
+                value="40"
+                min="0"
+                max="100"
+              /><br /><br />
+            </div>
+          </div>
+
+          <!-- Columns for Buttons -->
+          <div class="col-lg-1 col-md-3 col-sm-6 col-xs-4 col-bordered">
+            <div class="form-group">
+              <button
+                type="button"
+                class="btn btn-primary text-dark"
+                onclick="initialGrid()"
+              >
+                Reset</button
+              ><br /><br />
+            </div>
+            <div class="form-group">
+              <button
+                type="button"
+                class="btn btn-primary text-dark"
+                onclick="schellingOneStep()"
+              >
+                Step</button
+              ><br /><br />
+            </div>
+            <div class="form-group">
+              <button
+                type="button"
+                class="btn btn-primary text-dark"
+                onclick="schellingUntilDone()"
+              >
+                Run</button
+              ><br /><br />
+            </div>
+            <div class="form-group">
+              <button
+                type="button"
+                class="btn btn-primary text-dark"
+                id="stop-button"
+              >
+                Stop</button
+              ><br /><br />
+            </div>
+          </div>
+
+          <!-- Container for Table Grid -->
+          <div
+            class="col-lg-4 col-md-5 col-sm-6 col-xs-12 col-bordered gridPad"
+          >
+            <table id="grid">
+              <!-- intialGrid() builds the table here -->
+            </table>
+          </div>
+          <!-- <canvas id="myCanvas" width="200" height="100" class="col-bordered"></canvas> -->
+          <!-- Container for Model Description -->
+          <div
+            class="container col-lg-12 col-md-12 col-sm-12 col-xs-12 col-bordered"
+          >
+            <div class="container">
+              <br />
+              <p>
+                The Schelling model is a simple agent-based model that
+                demonstrates how individuals’ relocation decisions can generate
+                residential segregation in cities. In this model, agents belong
+                to one of two groups and occupy cells of rectangular space. A
+                cell can be occupied by a single agent only. Agents are able to
+                relocate according to the fraction of friends (i.e., agents of
+                their own group) within a neighbourhood around their location.
+              </p>
+
+              <p>
+                Here is a brief method for implementing a Schelling model with
+                parameters <code>Cells</code>, <code>threshold</code>,
+                <code>vacancy</code>, and <code>mix</code>:
+              </p>
+
+              <ol>
+                <li>
+                  Initialize the square grid with <code>Reset</code>. You can
+                  change the number of <code>Cells</code>, where each cell can
+                  be occupied by an agent of one of two groups, with ratio
+                  <code>mix</code>, or be vacant with probability
+                  <code>vacancy</code>.
+                </li>
+                <li>
+                  For each agent, calculate the number of friends within its
+                  neighbourhood.
+                </li>
+                <li>
+                  If the number of friends is below the <code>threshold</code>,
+                  the agent is unhappy and will relocate to a random vacant
+                  cell. (Each cell has at most 8 neighbours)
+                </li>
+                <li>
+                  Press <code>Step</code> to run one iteration,<code>Run</code>
+                  to run the simulation, and <code>Stop</code> to end.(Some
+                  settings will lead to choas and never end!)
+                </li>
+                <li>The simulation runs until no more unhappy agents exist.</li>
+              </ol>
+
+              <p>
+                This is just one way to implement a Schelling model with these
+                parameters. There are many variations and extensions to this
+                basic model that you can explore.
+              </p>
+            </div>
+          </div>
         </div>
-        <br>
-        <div class="container-fluid pt-5 my-5 bg-light ">
-            <!-- Section Heading with link -->
-            <div class="row">
-
-                <!-- columns for labels -->
-                <div class="col-lg-1 col-md-2 col-sm-6 col-xs-4 col-bordered">
-                    <div class="form-group">
-                        <label for="n_row">Cells</label><br><br>
-                    </div>
-                    <div class="form-group">
-                        <label for="threshold">Threshold</label><br><br>
-                    </div>
-                    <div class="form-group">
-                        <label for="density">Vacancy</label><br><br>
-                    </div>
-                    <div class="form-group">
-                        <label for="density">Mix</label><br><br>
-                    </div>
-                </div>
-
-                <!-- Column for Input Fields -->
-                <div class="col-lg-1 col-md-2 col-sm-6 col-xs-4 col-bordered">
-                  <div class="form-group">
-                    <input type="number" class="form-control" id="n_row" name="n_row" value="48"><br><br>
-                  </div>
-                  <div class="form-group">
-                    <input type="number" class="form-control" id="threshold" name="threshold" value="3" min="1" max="7"><br><br>
-                  </div>
-                  <div class="form-group">
-                    <input type="number" class="form-control" id="vacancy" name="vacancy" value="20"><br><br>
-                  </div>
-                  <div class="form-group">
-                    <input type="number" class="form-control" id="mix" name="mix" value="40" min="0" max="100"><br><br>
-                  </div>
-                </div>
-
-                <!-- Columns for Buttons -->
-                <div class="col-lg-1 col-md-3 col-sm-6 col-xs-4 col-bordered">
-                  <div class="form-group">
-                    <button type="button" class="btn btn-primary text-dark" onclick="initialGrid()">Reset</button><br><br>
-                  </div>
-                  <div class="form-group">
-                    <button type="button" class="btn btn-primary text-dark" onclick="schellingOneStep()">Step</button><br><br>
-                  </div>
-                  <div class="form-group">
-                    <button type="button" class="btn btn-primary text-dark" onclick="schellingUntilDone()">Run</button><br><br>
-                  </div>
-                  <div class="form-group">
-                    <button type="button" class="btn btn-primary text-dark" id="stop-button">Stop</button><br><br>
-                  </div>
-                </div>
-
-                <!-- Container for Table Grid -->
-                <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 col-bordered gridPad">
-                    <table id="grid">
-                       <!-- intialGrid() builds the table here -->
-                    </table>
-                </div>
-                <!-- <canvas id="myCanvas" width="200" height="100" class="col-bordered"></canvas> -->
-                <!-- Container for Model Description -->
-                <div class="container col-lg-12 col-md-12 col-sm-12 col-xs-12 col-bordered">
-                    <div class="container"> 
-                        <br>
-                        <p>The Schelling model is a simple agent-based model that demonstrates how individuals’ relocation decisions can generate residential segregation in cities. In this model, agents belong to one of two groups and occupy cells of rectangular space. A cell can be occupied by a single agent only. Agents are able to relocate according to the fraction of friends (i.e., agents of their own group) within a neighbourhood around their location.</p>
-
-                        <p>Here is a brief method for implementing a Schelling model with parameters <code>Cells</code>, <code>threshold</code>, <code>vacancy</code>, and <code>mix</code>:</p>
-
-                        <ol>
-                          <li>Initialize the square grid with <code>Reset</code>. You can change the number of <code>Cells</code>, where each cell can be occupied by an agent of one of two groups, with ratio <code>mix</code>, or be vacant with probability <code>vacancy</code>.</li>
-                          <li>For each agent, calculate the number of friends within its neighbourhood.</li>
-                          <li>If the number of friends is below the <code>threshold</code>, the agent is unhappy and will relocate to a random vacant cell. (Each cell has at most 8 neighbours)</li>
-                          <li>Press <code>Step</code> to run one iteration,<code>Run</code> to run the simulation, and <code>Stop</code> to end.(Some settings will lead to choas and never end!)</li>
-                          <li>The simulation runs until no more unhappy agents exist.</li>
-                        </ol>
-
-                        <p>This is just one way to implement a Schelling model with these parameters. There are many variations and extensions to this basic model that you can explore.</p>
-                    </div>
-                </div>
-
-            </div> 
-
-        </div>
-        <br>
-        <!-- Cellar Automa Model -->
-        <div class="row sigma-home single-page-nav">
-        </div>
+      </div>
+      <br />
+      <!-- Cellar Automa Model -->
+      <div class="row sigma-home single-page-nav"></div>
     </main>
 
     <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <hr class="sigma-hr" />
+          </div>
+        </div>
 
-    	<div class="container-fluid">
-        
-        	<div class="row">
-                <div class="col-md-12">
-                	<hr class="sigma-hr">
-                </div>
-            </div>
+        <div class="row">
+          <div class="sigma-copyright col-lg-8">
+            <p>Copyright © 2001-2023 David Luke Dipole Theory</p>
+          </div>
 
-            <div class="row">
-            	<div class="sigma-copyright col-lg-8">
-                	<p>Copyright © 2001-2023 David Luke Dipole Theory</p>
-                </div>
-                
-                <div class="sigma-copyright col-lg-4 single-page-nav text-right">
-                	<p><a href="#top">Go to top</a></p>
-                </div>
-            </div>
-            
-        </div>   
-
+          <div class="sigma-copyright col-lg-4 single-page-nav text-right">
+            <p><a href="#top">Go to top</a></p>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="js/maths.js"></script>
-</body>
+  </body>
 </html>
-
-
-
-
-
