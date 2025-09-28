@@ -420,6 +420,16 @@ and (orientation : portrait) {
 	}
 }
 
+#visitor-count {
+  background: linear-gradient(45deg, #007bff, #00ff88);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 5px;
+}
 
 
 
